@@ -15,7 +15,9 @@
 #' @param cluster Logical; if TRUE, marker clustering is enabled.
 #' @param warn Logical; if TRUE, warnings from validation are printed.
 #' @param file Optional character string. Path of the HTML file to create.
-#'   If NULL, a temporary HTML file is created.
+#'   If NULL, the file is saved as \code{"grappa_map.html"} in the current
+#'   working directory.
+#' @param open Logical; if TRUE, the HTML file is opened in the default browser.
 #'
 #' @return Invisibly returns a list with:
 #' \describe{
@@ -23,7 +25,7 @@
 #'   \item{file}{The path to the generated HTML file.}
 #' }
 #' @export
-grappa_map <- function(cluster = TRUE, warn = TRUE, file = NULL) {
+grappa_map <- function(cluster = TRUE, warn = TRUE, file = NULL, open = TRUE) {
 
   if (!requireNamespace("leaflet", quietly = TRUE)) {
     stop("Package 'leaflet' is required but not installed.", call. = FALSE)
@@ -154,7 +156,7 @@ grappa_map <- function(cluster = TRUE, warn = TRUE, file = NULL) {
     )
 
   if (is.null(file)) {
-    file <- tempfile(pattern = "grappa_map_", fileext = ".html")
+    file <- file.path(getwd(), "grappa_map.html")
   }
 
   file <- normalizePath(file, winslash = "/", mustWork = FALSE)
@@ -165,12 +167,12 @@ grappa_map <- function(cluster = TRUE, warn = TRUE, file = NULL) {
     selfcontained = TRUE
   )
 
-  if (.Platform$OS.type == "windows") {
-    shell.exec(normalizePath(file, winslash = "\\", mustWork = TRUE))
-  } else if (Sys.info()[["sysname"]] == "Darwin") {
-    system2("open", shQuote(file), wait = FALSE)
-  } else {
-    system2("xdg-open", shQuote(file), wait = FALSE)
+  if (!file.exists(file)) {
+    stop("HTML map file was not created successfully.", call. = FALSE)
+  }
+
+  if (open) {
+    utils::browseURL(file)
   }
 
   invisible(list(

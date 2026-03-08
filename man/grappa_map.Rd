@@ -4,7 +4,7 @@
 \alias{grappa_map}
 \title{Create an interactive map of grappa locations}
 \usage{
-grappa_map(cluster = TRUE, warn = TRUE, file = NULL)
+grappa_map(cluster = TRUE, warn = TRUE, file = NULL, open = TRUE)
 }
 \arguments{
 \item{cluster}{Logical; if TRUE, marker clustering is enabled.}
@@ -12,7 +12,10 @@ grappa_map(cluster = TRUE, warn = TRUE, file = NULL)
 \item{warn}{Logical; if TRUE, warnings from validation are printed.}
 
 \item{file}{Optional character string. Path of the HTML file to create.
-If NULL, a temporary HTML file is created.}
+If NULL, the file is saved as \code{"grappa_map.html"} in the current
+working directory.}
+
+\item{open}{Logical; if TRUE, the HTML file is opened in the default browser.}
 }
 \value{
 Invisibly returns a list with:
