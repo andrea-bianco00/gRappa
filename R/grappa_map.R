@@ -89,7 +89,7 @@ grappa_map <- function(cluster = TRUE, warn = TRUE) {
     popup_text <- vapply(seq_len(nrow(df_p)), function(i) {
       row <- df_p[i, , drop = FALSE]
 
-      first_line <- paste(na.omit(c(row$street, row$street_number)), collapse = " ")
+      first_line <- paste(stats::na.omit(c(row$street, row$street_number)), collapse = " ")
       if (!nzchar(first_line)) {
         first_line <- NA_character_
       }

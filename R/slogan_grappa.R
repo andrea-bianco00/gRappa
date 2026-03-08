@@ -30,7 +30,7 @@ slogan_grappa <- function(n_letters = 4, n_slogans = 1) {
     "La grappa ti abbraccia, mica come %s.",
     "Se la vita ti acciappa, rispondi con la grappa e con %s.",
     "La grappa ti scalda meglio di %s.",
-    "Quando arriva la grappa, tutto il resto è %s.",
+    "Quando arriva la grappa, tutto il resto \u00E8 %s.",
     "Prima la grappa, poi eventualmente %s.",
     "Chi beve grappa non teme %s.",
     "Meglio la grappa che %s.",
