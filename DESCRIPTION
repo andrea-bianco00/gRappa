@@ -2,7 +2,7 @@ Package: gRappa
 Title: A Playful R Package for Grappa Maps, Icons, and Media
 Version: 0.1.0
 Authors@R: 
-    person("Andrea", "Bianco", , "andrea.bianco@example.com", role = c("aut", "cre"))
+    person("Andrea", "Bianco", , "andrea.bianco00.ab@gmail.com", role = c("aut", "cre"))
 Description: A playful R package for grappa-related utilities, including
     interactive maps of grappa locations, icon visualization tools,
     dataset helpers, and other multimedia functions.
