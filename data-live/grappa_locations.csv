@@ -1,0 +1,7 @@
+"id","date","player","grappa_label","place_name","street","street_number","city","postal_code","region","country","latitude","longitude","source_type","note"
+"grp_000001","2026-03-01","Andrea","Grappa Nardini","Maison de Rennes","Rue de Paris","10","Rennes","35000","Bretagne","France",48.1113,-1.68,"manual_coordinates","Bevuta dopo cena"
+"grp_000002","2026-03-02","Matteo","Grappa Nonino","Osteria del Porto","Via Garibaldi","24","Trieste","34121","Friuli-Venezia Giulia","Italy",45.6495,13.7768,"geocoded_address","Post partita"
+"grp_000003","2026-03-03","Rodrigue","Grappa Bianca","Bar du Centre","Avenue Jean Jaurès","15","Paris","75019","Île-de-France","France",48.8822,2.3708,"manual_coordinates","Serata molto seria"
+"grp_000004","2026-03-04","Egle",,"Casa di montagna","Via Roma","8","Aosta","11100","Valle d'Aosta","Italy",,,"approximate","Da geocodificare"
+"grp_000005","2026-03-05","Giovanni","Grappa Riserva",,"Via Milano","12","Milano","20100","Lombardia","Italy",,,"geocoded_address","Indirizzo incompleto"
+"grp_000006","2026-03-06","Luca","Grappa della Nonna","Pub del Porto","Calle Mayor","7","Madrid","28013","Madrid","Spain",40.4168,-3.7038,"manual_coordinates","Prima grappa in Spagna"
