@@ -5,3 +5,4 @@
 "grp_000004","2026-03-04","Egle",,"Casa di montagna","Via Roma","8","Aosta","11100","Valle d'Aosta","Italy",,,"approximate","Da geocodificare"
 "grp_000005","2026-03-05","Giovanni","Grappa Riserva",,"Via Milano","12","Milano","20100","Lombardia","Italy",,,"geocoded_address","Indirizzo incompleto"
 "grp_000006","2026-03-06","Luca","Grappa della Nonna","Pub del Porto","Calle Mayor","7","Madrid","28013","Madrid","Spain",40.4168,-3.7038,"manual_coordinates","Prima grappa in Spagna"
+"grp_000007","2026-03-10","Andrea","Grappa Test","Bar del Mondo","","","Bologna","40100","Emilia-Romagna","Italy","44.4949","11.3426","manual_coordinates","Test Bologna"
