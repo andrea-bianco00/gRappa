@@ -16,7 +16,6 @@
 #' @param warn Logical; if TRUE, warnings from validation are printed.
 #' @param file Optional character string. Path of the HTML file to create.
 #'   If NULL, a temporary HTML file is created.
-#' @param selfcontained Logical; if TRUE, saves a self-contained HTML widget.
 #'
 #' @return Invisibly returns a list with:
 #' \describe{
@@ -24,10 +23,7 @@
 #'   \item{file}{The path to the generated HTML file.}
 #' }
 #' @export
-grappa_map <- function(cluster = TRUE,
-                       warn = TRUE,
-                       file = NULL,
-                       selfcontained = TRUE) {
+grappa_map <- function(cluster = TRUE, warn = TRUE, file = NULL) {
 
   if (!requireNamespace("leaflet", quietly = TRUE)) {
     stop("Package 'leaflet' is required but not installed.", call. = FALSE)
@@ -159,17 +155,23 @@ grappa_map <- function(cluster = TRUE,
 
   if (is.null(file)) {
     file <- tempfile(pattern = "grappa_map_", fileext = ".html")
-  } else {
-    file <- normalizePath(file, winslash = "/", mustWork = FALSE)
   }
+
+  file <- normalizePath(file, winslash = "/", mustWork = FALSE)
 
   htmlwidgets::saveWidget(
     widget = m,
     file = file,
-    selfcontained = selfcontained
+    selfcontained = TRUE
   )
 
-  utils::browseURL(file)
+  if (.Platform$OS.type == "windows") {
+    shell.exec(normalizePath(file, winslash = "\\", mustWork = TRUE))
+  } else if (Sys.info()[["sysname"]] == "Darwin") {
+    system2("open", shQuote(file), wait = FALSE)
+  } else {
+    system2("xdg-open", shQuote(file), wait = FALSE)
+  }
 
   invisible(list(
     map = m,

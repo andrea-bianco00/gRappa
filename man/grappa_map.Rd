@@ -4,7 +4,7 @@
 \alias{grappa_map}
 \title{Create an interactive map of grappa locations}
 \usage{
-grappa_map(cluster = TRUE, warn = TRUE, file = NULL, selfcontained = TRUE)
+grappa_map(cluster = TRUE, warn = TRUE, file = NULL)
 }
 \arguments{
 \item{cluster}{Logical; if TRUE, marker clustering is enabled.}
@@ -13,8 +13,6 @@ grappa_map(cluster = TRUE, warn = TRUE, file = NULL, selfcontained = TRUE)
 
 \item{file}{Optional character string. Path of the HTML file to create.
 If NULL, a temporary HTML file is created.}
-
-\item{selfcontained}{Logical; if TRUE, saves a self-contained HTML widget.}
 }
 \value{
 Invisibly returns a list with:
