@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andrea-bianco00/gRappa/main/inst/extdata/icons/grappa_glass.png" width="300">
+  <img src="https://raw.githubusercontent.com/andrea-bianco00/gRappa/main/inst/extdata/icons/grappa_glass.png" width="50">
 </p>
 
 # gRappa
