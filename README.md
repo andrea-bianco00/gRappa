@@ -3,4 +3,7 @@
 </p>
 
 # gRappa
-TI DA UN FORTE ABBRACCIO
+
+Perch la grappa pu essere anche questo, un pacchetto.
+Dedicato ai miei grappers e a tutti coloro che ancora non hanno trovato il loro grappo.
+Andrea :)
